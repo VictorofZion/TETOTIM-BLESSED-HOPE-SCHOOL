@@ -83,14 +83,7 @@ width: 100%;
     padding: 0 0px;
 }
 
-/*.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    color: #3d3c3c;
-}*/
+
 
 
 nav {
@@ -201,6 +194,7 @@ body {
 .hero-section {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     flex-direction: column;
      min-height: 900px;
      width: 100%;
@@ -253,14 +247,14 @@ body {
 
   
 .hero-title {
-    font-size: 90px;
+    font-size: 100px;
     font-weight: 1000;
     color: #09014e;
     text-wrap: wrap;
    -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #be0b0b;;
-    text-align: left;
-    margin: 20px;
+    text-align: center;
+    margin: 0px;
    font-family: Georgia, 'Times New Roman', Times, serif;
 
 
@@ -277,11 +271,11 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: semi-bold;
     color: #000;
     margin: 20px;
-    text-align: left;
+    text-align: center;
     font-family: "Bungee", sans-serif;
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #be0b0b;;
@@ -296,11 +290,11 @@ body {
 }
 
 .address {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     color: #000;
     margin: 20px;
-    text-align: left;
+    text-align: center;
     font-family: cursive;
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #be0b0b;;
@@ -1443,6 +1437,7 @@ width: 70%;
 
    
 }
+
 
 
 
