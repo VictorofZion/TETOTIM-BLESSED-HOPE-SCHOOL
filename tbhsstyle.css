@@ -51,7 +51,7 @@ body , html {
    @media (max-width: 480px) {
     height: 40px;
     width: 100%;
-   position: relative;
+   
 
     background-image: linear-gradient(to right, whitesmoke, bisque, rgb(216, 163, 17));
 
@@ -1467,3 +1467,4 @@ width: 70%;
 
    
 }
+
