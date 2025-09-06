@@ -251,49 +251,14 @@ body {
     
     }
 
-   /*         
-      
-    }
-
-    
-    
-    
-
-/*.news h2 {
-    color: #ffffff;
-    text-decoration: underline;
-    font-size: 30px;
-    text-align: center;
-}
-.news-text1 {
-     font-size: 25px;
-    line-height: 1.8;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    text-align: center;
-    margin-top: 20px;
-    color: rgb(0, 0, 0);
-  -webkit-text-stroke: 0.8px rgb(100, 6, 6); 
-  text-shadow: 2px 2px 5px rgba(218, 10, 10, 0.7); 
-}
-
-.news-text3 {
-    font-size: 25px;
-    line-height: 1.8;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    text-align: center;
-    margin-top: 20px;
-    color: rgb(231, 18, 18);
-  -webkit-text-stroke: 0.5px rgb(211, 14, 14); 
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); 
-}*/
-
+  
 .hero-title {
     font-size: 90px;
     font-weight: 1000;
     color: #09014e;
     text-wrap: wrap;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #09014e;;
+   -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #be0b0b;;
     text-align: left;
     margin: 20px;
    font-family: Georgia, 'Times New Roman', Times, serif;
@@ -318,6 +283,8 @@ body {
     margin: 20px;
     text-align: left;
     font-family: "Bungee", sans-serif;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #be0b0b;;
 
     @media (max-width: 768px) {
         font-size: 20px;
@@ -335,6 +302,8 @@ body {
     margin: 20px;
     text-align: left;
     font-family: cursive;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #be0b0b;;
 
     @media (max-width: 768px) {
         font-size: 18px;
@@ -1474,5 +1443,6 @@ width: 70%;
 
    
 }
+
 
 
