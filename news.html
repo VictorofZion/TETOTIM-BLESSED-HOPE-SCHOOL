@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="news.css">
+        <title>Home Work</title>
+    </head>
+    <body>
+        
+<section class="head">
+   <div> LATEST NEWS!</div>
+   <div> LATEST NEWS!</div>
+   <div> LATEST NEWS!</div>
+</section>
+
+<!-- ✅ Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <style>
+    body {
+      margin: 0;
+    }
+    .swiper {
+      width: 100%;
+      height: 50dvh; /* full screen slider */
+      @media(min-width: 769px){
+        height: 85dvh;
+    }
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 20px;
+      margin-top: 0px;
+      font-weight: normal;
+      color: rgb(0, 0, 0);
+       background-position: center;
+  background-repeat: no-repeat;  
+  background-size: contain; 
+
+   @media(min-width: 769px){
+        background-size: cover;
+       
+        font-size: 25px;
+    }
+    }
+    .swiper-slide:nth-child(1) { background-image: url(prac.jpg) }
+    .swiper-slide:nth-child(2) { background-image:url(march1.jpg); }
+    .swiper-slide:nth-child(3) { background-image:url(back-2-school.jpg); }
+    .swiper-slide:nth-child(4) { background-image: url(tprac.jpg) }
+    .swiper-slide:nth-child(5) { background-image:url(flag.jpg); }
+    .swiper-slide:nth-child(6) { background-image:url(mstand.jpg); }
+  .swiper-slide:nth-child(7) { background-image: url(valectdictorian.jpg) }
+    .swiper-slide:nth-child(8) { background-image:url(comp.jpg); }
+    .swiper-slide:nth-child(9) { background-image:url(ict.jpg); }
+ 
+  </style>
+  
+  <!-- ✅ Swiper structure -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+<div class="swiper-slide"></div>
+<div class="swiper-slide"></div>
+<div class="swiper-slide"></div>
+<div class="swiper-slide"></div>
+<div class="swiper-slide"></div>
+<div class="swiper-slide"></div>
+
+     
+    </div>
+
+    <!-- ✅ pagination + nav -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- ✅ Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- ✅ Initialize Swiper -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiper = new Swiper('.swiper', {
+        loop: false, // infinite loop
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+</script>
+
+
+<div class="assignment">
+  <div class="ass">
+    <div class="asss">
+  <p>📢 School Resumption Notice
+Dear Parents, Guardians, and Students,
+We are excited to announce that school officially resumes on [insert date]! 🎉✨
+We look forward to welcoming our students back for another term of learning, growth, and excellence.
+Kindly ensure all necessary preparations are made ahead of resumption. Together, let’s make this term productive and impactful!
+
+Welcome back to school – where every day is a step towards greatness!
+</p>
+      </div>
+     <div class="asss">
+  <p>>📢 School Resumption Notice
+Dear Parents, Guardians, and Students,
+We are excited to announce that school officially resumes on [insert date]! 🎉✨
+We look forward to welcoming our students back for another term of learning, growth, and excellence.
+Kindly ensure all necessary preparations are made ahead of resumption. Together, let’s make this term productive and impactful!
+
+Welcome back to school – where every day is a step towards greatness!</p>
+     </div>
+</div>
+</div>
+
+<div class="news">
+    <div>
+    <h3 class="enroll">SCHOOL RESUMPTION</h3>
+    <p><b>Dear Parents, Guardians, and Students,</b><br />
+We are delighted to announce that school officially resumes on Monday, 15th September 2025. After a refreshing break, we are excited to welcome our students back to an inspiring new term filled with learning, growth, and opportunities.<br />
+At <b>TBHS,</b></p> we remain committed to providing a safe, nurturing, and academically rich environment where every child can thrive. This new term promises engaging lessons, exciting programs, and activities designed to develop not only knowledge but also character, creativity, and confidence.<br />
+<b>Important Reminders for Parents & Students:</b><br />
+<ul>
+
+<li>Ensure all necessary books, uniforms, and learning materials are ready before resumption.</li>
+<li>Students are expected to arrive on time each school day.</li>
+<li>School fees and other levies should be settled promptly to enable a smooth start to the term.</li>
+<li>Parents are encouraged to stay actively involved in their child’s education through constant communication with teachers.</li>
+</ul>
+We strongly believe that with focus, discipline, and hard work, this term will be a remarkable success for all our students. Together, as a community of parents, teachers, and learners, we can make this new academic journey fruitful and rewarding.<br />
+Welcome back to school — where excellence is nurtured and futures are shaped! ✨<br />
+<b>Signed,</b><br />
+The School Management<br />
+<b>TETOTIM BLESSED HOPE SCHOOL</b>
+
+</p>
+</div>
+<div>
+    <h3 class="enroll">SCHOOL FEES PAYMENT</h3>
+    <p><b>Dear Parents and Guardians,</b><br />
+ We deeply appreciate your commitment and sacrifice towards giving your children the best education possible. Your support and partnership make it possible for us to maintain the high standard of teaching, facilities, and care that every child deserves.<br />
+We kindly encourage all parents and guardians to ensure that school fees are paid promptly. Timely payment not only helps the school to run smoothly, but it also allows us to provide uninterrupted learning, quality resources, and a safe, conducive environment for your children.<br />
+We understand the dedication it takes to invest in education, and we assure you that every contribution goes directly into building a brighter future for your child. By working together, we can continue to nurture confident, disciplined, and successful learners.<br />
+Thank you for your cooperation and trust. Let’s keep making education a priority — because your child’s future is worth it.<br />
+<b>Signed,</b><br />
+The School Management<br />
+<b>TETOTIM BLESSED HOPE SCHOOL</b>
+
+</p>
+</div>
+<div>
+    <h3 class="enroll">ENCOURAGEMENT</h3>
+    <p><b>For Parents</b><br />
+<ul>
+<li>“Every fee you pay is a seed sown into your child’s future — thank you for investing in greatness.”</li>
+<li>“Your support at home makes all the difference in your child’s success at school.”</li>
+<li>“Together, we are raising confident, responsible, and brilliant leaders.”</li>
+</ul>
+</p>
+</div>
+<div>
+    <h3 class="enroll">ENCOURAGEMENT</h3>
+    <p><b>For Students</b><br />
+<ul>
+<li>“Do your best today, so your tomorrow will be even brighter.”</li>
+<li>“Homework, discipline, and hard work are the keys to unlocking your dreams.”</li>
+<li>“Believe in yourself — you are capable of achieving excellence.”</li>
+</ul>
+</p>
+
+</div>
+</div>
+    </body>
+
+     <footer class="footer-content">
+  <div class="foot1">
+  <div class="footer-logo-container">
+   <img class="footer-logo" src="TBHS1.png" alt="logo"></div>
+   <div class="foot1-2"><p>Tetotim Blessed Hope School</p>
+   <p>Read Play Lead Succeed</p>
+   </div>
+   </div>
+<div class="foot1-3">
+
+<p class="footnote">Quick Links</p>
+
+  <p><a href="index.html">Home</a></p>
+  <p><a href="news.html">Newsletter</a></p>
+  <p><a href="home work.html">Home Works</a></p>
+  <p><a href="tests and exams.html">Tests & Exams</a></p>
+  <p><a href="form.html">Check Results</a></p>
+</div>
+
+
+<div class="foot2">
+
+    <div class="footnote">Contact us</div>
+    <div class="contact-info">
+    <div class="mail">
+      <div>
+      <p><img class="f-icon" src="mail.png"></p>
+      </div>
+      <div>
+      <p>tbhschools@gmail.com</p>
+      </div>
+    </div>
+    <div class="phone">
+      <div>
+      <p><img class="f-icon" src="telephone.png"></p>
+     </div>
+     <div>
+      <p>+234-902-862-9730</p>
+      </div>
+    </div>
+    <div class="whatsapp">
+      <div>
+      <p><img class="f-icon" src="whatsapp.png"></p>
+      </div>
+      <div>
+        <p>+234-902-862-9730</p>
+      </div>
+      </div>
+      <div class="location">
+        <div>
+          <p><img class="f-icon" src="pin.png"></p>
+        </div>
+        <div>
+          <p>Ado Ekiti</p>
+        </div>
+        </div>
+        </div>
+      </div>
+      <div class="footlast">
+        <p>At TBHS, education goes beyond the classroom. We nurture intellect, character, and confidence  preparing students to excel in an ever-changing world. Give your child the advantage of quality education; enroll today!
+        </p>
+      </div>
+
+  
+<div class="foot4">
+  &copy; 2025 TBHS. All rights reserved.
+  </div>
+</footer>
+</html>

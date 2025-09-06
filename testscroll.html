@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper Demo</title>
+
+  <!-- ✅ Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <style>
+    body {
+      margin: 0;
+    }
+    .swiper {
+      width: 100%;
+      height: 100vh; /* full screen slider */
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+    }
+    .swiper-slide:nth-child(1) { background: teal; }
+    .swiper-slide:nth-child(2) { background: darkorange; }
+    .swiper-slide:nth-child(3) { background: purple; }
+    .swiper-slide:nth-child(4) { background: green; }
+  </style>
+</head>
+<body>
+  
+  <!-- ✅ Swiper structure -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><h2>LATEST NEWS</h2>
+            <p class="news-text">Welcome to TBHS! We are excited to announce the opening of our new school, dedicated to providing quality education and a nurturing environment for all students. Join us for our upcoming events and activities designed to engage students and foster a love for learning. We are committed to creating a supportive 
+              community where students can thrive academically and socially. Stay tuned for more updates and information about our programs and initiatives.</div>
+      <div class="swiper-slide"><h2>LATEST NEWS</h2>
+        
+       <p class="news-text2">2025 School Admission Now Open For Registration.<br />
+      NOTE: Exams for new pupils holds every tuesday in August.</p>
+    </div>
+      <div class="swiper-slide"><h2>LATEST NEWS</h2>
+        
+        
+       <p class="news-text3">Dear Parents, Guardians, and Students,
+
+We are excited to announce that school officially resumes on 15th September 2025! 🎉✨<br />
+We look forward to welcoming our students back for another term of learning, growth, and excellence.<br />
+
+Kindly ensure all necessary preparations are made ahead of resumption.<br /> Together, let’s make this term productive and impactful!<br />
+
+Welcome back to school – where every day is a step towards greatness!</p>
+</div>
+      <div class="swiper-slide">Slide 4</div>
+    </div>
+
+    <!-- ✅ pagination + nav -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- ✅ Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- ✅ Initialize Swiper -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiper = new Swiper('.swiper', {
+        loop: true, // infinite loop
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+  </script>
+</body>
+</html>

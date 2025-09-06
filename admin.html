@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Upload Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .box {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #007BFF;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="adminBox">
+    <h2>Admin Login</h2>
+    <input id="adminUser" placeholder="Admin Username">
+    <input id="adminPass" type="password" placeholder="Admin Password">
+    <button onclick="adminLogin()">Login</button>
+  </div>
+
+  <div class="box" id="uploadBox" style="display:none;">
+    <h2>Upload Student Result</h2>
+    <input id="studentName" placeholder="Student Name">
+    <input id="studentPass" placeholder="Student Password">
+    <input id="subject" placeholder="Subject">
+    <input id="score" type="number" placeholder="Score">
+    <button onclick="addResult()">Add Result</button>
+  </div>
+
+  <script src="https://unpkg.com/@supabase/supabase-js"></script>
+  <script>
+    // 🚨 Replace with your Supabase details
+    const SUPABASE_URL = "https://cxdstoejytbtcdrcbzdd.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4ZHN0b2VqeXRidGNkcmNiemRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxMDA0NjcsImV4cCI6MjA3MjY3NjQ2N30.mAXtKMPAa2a9dy9BfnGdadyTymg_TlJ9CtZpWihiiOw";
+    const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    // Hardcoded Admin Credentials (simple for now)
+    const ADMIN_USER = "Emerald";
+    const ADMIN_PASS = "Eldorado0234";
+
+    function adminLogin() {
+      const u = document.getElementById("adminUser").value.trim();
+      const p = document.getElementById("adminPass").value.trim();
+
+      if (u === ADMIN_USER && p === ADMIN_PASS) {
+        document.getElementById("adminBox").style.display = "none";
+        document.getElementById("uploadBox").style.display = "block";
+      } else {
+        alert("❌ Invalid admin login");
+      }
+    }
+
+    async function addResult() {
+      const name = document.getElementById("studentName").value.trim();
+      const password = document.getElementById("studentPass").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const score = parseInt(document.getElementById("score").value);
+
+      if (!name || !password || !subject || isNaN(score)) {
+        alert("⚠️ Please fill all fields");
+        return;
+      }
+
+      const { data, error } = await client.from("students").insert([
+        { name, password, subject, score }
+      ]);
+
+      if (error) {
+        alert("❌ Error: " + error.message);
+      } else {
+        alert("✅ Result added successfully!");
+        // Clear form
+        document.getElementById("studentName").value = "";
+        document.getElementById("studentPass").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("score").value = "";
+      }
+    }
+  </script>
+</body>
+</html>

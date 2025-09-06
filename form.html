@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+    .login-box, .results-box {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 320px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #007BFF;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .results-box {
+      display: none; /* hidden until login */
+    }
+    table {
+      width: 100%;
+      margin-top: 10px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Login Form -->
+  <div class="login-box" id="loginBox">
+    <h2>Student Login</h2>
+    <input id="username" placeholder="Enter Name">
+    <input id="password" type="password" placeholder="Enter Password">
+    <button onclick="logIn()">Log In</button>
+  </div>
+
+  <!-- Results Section -->
+  <div class="results-box" id="resultsBox">
+    <h2>Welcome, <span id="studentName"></span></h2>
+    <p>Your Results:</p>
+    <table id="resultsTable">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Supabase -->
+  <script src="https://unpkg.com/@supabase/supabase-js"></script>
+  <script>
+    const SUPABASE_URL = "https://cxdstoejytbtcdrcbzdd.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4ZHN0b2VqeXRidGNkcmNiemRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxMDA0NjcsImV4cCI6MjA3MjY3NjQ2N30.mAXtKMPAa2a9dy9BfnGdadyTymg_TlJ9CtZpWihiiOw";
+    const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    async function logIn() {
+      const name = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      const { data, error } = await client
+        .from("students")
+        .select("*")
+        .eq("name", name)
+        .eq("password", password);
+
+      if (error) {
+        alert("Error: " + error.message);
+        return;
+      }
+
+      if (data.length > 0) {
+        // Hide login, show results
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("resultsBox").style.display = "block";
+
+        // Show student name
+        document.getElementById("studentName").textContent = name;
+
+        // Populate results table
+        const tableBody = document.querySelector("#resultsTable tbody");
+        tableBody.innerHTML = ""; // clear previous
+        data.forEach(row => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `<td>${row.subject}</td><td>${row.score}</td>`;
+          tableBody.appendChild(tr);
+        });
+      } else {
+        alert("❌ Invalid login, try again.");
+      }
+    }
+  </script>
+</body>
+</html>

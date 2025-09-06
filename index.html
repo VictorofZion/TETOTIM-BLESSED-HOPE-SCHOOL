@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+  <html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="tbhsstyle.css">
+    <title>TBHS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+
+
+  
+   
+</head>
+<body>
+<!--   <div class="navbar">
+      <div class="scroll">
+     <div class="scroll-head">
+      <img class="logo" src="logo.png" alt="logo">
+     </div>
+      <div> 
+       
+      </div>
+      </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="coming soon.html">Newsletter</a>
+        <a href="home work.html">Home Works</a>
+        <a href="tests and exams.html">Tests & Exams</a>
+         <a href="coming soon.html">Contact Us</a>
+    </div>
+</div>-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script>
+  // Replace these with YOUR actual values from Supabase Settings > API
+  const supabase = supabase.createClient(
+    "https://cxdstoejytbtcdrcbzdd.supabase.co",  // 👈 paste your Project URL
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4ZHN0b2VqeXRidGNkcmNiemRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxMDA0NjcsImV4cCI6MjA3MjY3NjQ2N30.mAXtKMPAa2a9dy9BfnGdadyTymg_TlJ9CtZpWihiiOw"                  // 👈 paste your Anon key
+  );
+</script>
+
+      <nav class="navbar">
+        <ul class="sidebar">
+           <li onclick="hidesidebar()"> <a href="#"><img src="close.png"></a></li>
+           <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">Newsletter</a></li>
+          <li><a href="home work.html">Home Works</a></li>
+          <li><a href="tests and exams.html">Tests & Exams</a></li>
+          <li><a href="form.html">Check Results</a></li>
+      
+        </ul>
+        <ul>
+          <li class="tet"><a href="index.html">Tetotim Blessed Hope School</a></li>
+          <li class="hideOnMobile"><a href="index.html">Home</a></li>
+          <li class="hideOnMobile"><a href="news.html">Newsletter</a></li>
+          <li class="hideOnMobile"><a href="home work.html">Home Works</a></li>
+          <li class="hideOnMobile"><a href="tests and exams.html">Tests & Exams</a></li>
+          <li class="hideOnMobile"><a href="form.html">Check Results</a></li>
+         <li class="menu-btn" onclick="showsidebar()"> <a href="#"><img src="menu.png"></a></li>
+        </ul>
+         
+         
+    </nav>
+
+      <script>
+        function showsidebar(){
+          const sidebar = document.querySelector('.sidebar');
+          sidebar.style.display = 'flex'
+          }
+           
+          function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none'
+          }
+      </script>
+    <div class="hero-section" style="background-image: url('exam.jpg');
+         background-size: cover;
+        background-position: right center;">
+
+        <div class="div-log">
+        <img class="logo" src="TBHS1.png" alt="logo">
+        </div>
+      
+      <div class="hero-title">TETOTIM<br />BLESSED<br />HOPE<br />SCHOOL</div>
+    
+      <div class="hero-subtitle">Motto: Read Play Lead and Succeed</div>
+      <div class="address">Block W, Federal Housing Extension, Afao Road,<br />Opp. Omoloju Event Centre, Ado Ekiti</div>
+    
+     <div>
+       <div class="hero-buttons">
+      <a href="admin.html" class="hero-btn">Admin Login</a>
+       <a href="form.html" class="hero-btn2">Student Login</a>
+  </div>
+     </div>
+    </div>
+
+     
+
+
+
+
+
+  <!-- ✅ Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <style>
+    body {
+      margin: 0;
+    }
+    .swiper {
+      width: 100%;
+      height: 100dvh; /* full screen slider */
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 20px;
+      margin-top: 0px;
+      font-weight: normal;
+      color: rgb(0, 0, 0);
+       background-position: center;
+  background-repeat: no-repeat;  
+  background-size: cover; 
+    }
+    .swiper-slide:nth-child(1) { background-image: url(white1.jpg) }
+    .swiper-slide:nth-child(2) { background-image:url(white4.jpg); }
+    .swiper-slide:nth-child(3) { background-image:url(white2.jpg); }
+ 
+  </style>
+  
+  <!-- ✅ Swiper structure -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+            <p>Welcome to TBHS! We are excited to announce the opening of our new school, dedicated to providing quality education and a nurturing environment for all students. Join us for our upcoming events and activities designed to engage students and foster a love for learning. We are committed to creating a supportive 
+              community where students can thrive academically and socially. Stay tuned for more updates and information about our programs and initiatives.</div>
+      <div class="swiper-slide">
+        
+       <p>2025 School Admission Now Open For Registration.<br />
+      NOTE: Exams for new pupils holds every tuesday in August.<br /></p>
+    </div>
+      <div class="swiper-slide">
+        
+        
+       <p>Dear Parents, Guardians, and Students,
+
+We are excited to announce that school officially resumes on 15th September 2025! 🎉✨<br />
+We look forward to welcoming our students back for another term of learning, growth, and excellence.<br />
+
+Kindly ensure all necessary preparations are made ahead of resumption.<br /> Together, let’s make this term productive and impactful!<br />
+
+Welcome back to school – where every day is a step towards greatness!</p>
+</div>
+     
+    </div>
+
+    <!-- ✅ pagination + nav -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- ✅ Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- ✅ Initialize Swiper -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiper = new Swiper('.swiper', {
+        loop: false, // infinite loop
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+</script>
+
+  
+
+
+        <section class="intro">
+          <div class="intro-text">
+          <p>
+            Are you a parent seeking a school that provides quality education and a nurturing environment for your child?
+            Or a student eager to learn and grow in a supportive community?
+            Or an educator passionate about shaping young minds and fostering a love for learning?
+          </p>
+          <p>You have come to the right place!</p>
+          <p>At <strong>TBHS</strong>, we are dedicated to providing an exceptional educational experience that empowers students to excel academically, socially, and emotionally.
+            Our school is committed to fostering a culture of excellence, integrity, and respect, ensuring that every student reaches their full potential.
+            <strong>TBHS</strong> is more than just a school; it is a community where students are encouraged to read, play, lead, and succeed. 
+            Join us on this journey of discovery and growth!
+           </p>
+           </div>
+           <div class="intro-img" >
+            <img src="bg1.jpg" class ="intimg" alt="intro image">
+           </div>
+        </section>
+        <section class="yenrol">
+        <div class="enrol">
+          <h2>Why Enroll?</h2>
+          </div>
+          <div class="why-enroll">
+            <div class="enroll-item">
+              <img src="ability.png" class="icon">
+              <h3>Quality Education</h3>
+              <p>We provide a comprehensive curriculum designed to foster academic excellence and critical thinking skills.</p>
+            </div>
+            <div class="enroll-item">
+              <img src="education.png" class="icon">
+              <h3>Qualified And Caring Teachers</h3>
+              <p>Our teachers are committed to nurturing each student's potential and providing personalized attention.</p>
+            </div>
+            <div class="enroll-item">
+              <img src="book.png" class="icon">
+             <h3>Nurturing Environment</h3>
+              <p>Our school offers a supportive and inclusive atmosphere where every student feels valued and encouraged.</p>
+            </div>
+          
+            <div class="enroll-item">
+              <img src="chess.png" class="icon">
+              <h3>Extracurricular Activities</h3>
+              <p>We offer a variety of extracurricular programs that promote personal growth, teamwork, and leadership skills.</p>
+            </div>
+          </div>
+          
+            <div p-img>
+              <img src="prac1.png" class="prac" alt="Students science practicals">
+            </div>
+
+       <div class="overclass">
+        <p class="enrol">Classes Available</p>
+        
+        <div class="class-list">
+          
+          <div class="class-box">
+            <img src="baby.png" class="class-img">
+
+            <p>CRECHE</p>
+          </div>
+           
+           <div class="class-box">
+            <img src="prekg.png" class="class-img">
+
+            <p>PRE-KG</p>
+           </div>
+           <div class="class-box">
+            <img src="kg.png" class="class-img">
+
+            <p>KG</p>
+            </div>
+           <div class="class-box">
+            <img src="nursery.png" class="class-img">
+            <p>NURSERY</p>
+            </div>
+           <div class="class-box">
+            <img src="basic.png" class="class-img">
+
+            <p>BASIC 1-5</p>
+            </div>
+           <div class="class-box">
+            <img src="jss.png" class="class-img">
+
+            <p>JSS 1-3</p>
+            </div>
+       </div>
+       </div>
+       </section>
+
+       <section class="abt-section">
+        <div>
+          <p class="enroll">ABOUT US</p>
+        </div>
+        <div class="about">
+          <div class="about-school">
+          <div>
+            <h3 class="about-h">The School</h3>
+          </div>
+          <div>
+           <p class="notes"> Every great journey begins with a single step — and the story of <b>TBHS</b> is one of vision, dedication, and a passion for raising the next generation of leaders.
+
+Founded in 2017, our school was established with a simple but profound mission: to provide quality education in an environment where children are nurtured to discover their unique potential. What began as a small initiative has grown into a thriving community of learners, educators, and families united by a shared commitment to excellence.
+
+At <b>TBHS</b>, we believe education goes beyond the classroom. Our curriculum is carefully designed to balance academic rigor with creativity, character-building, and life skills that prepare students for the world ahead. From our engaging lessons and interactive learning methods to our co-curricular activities, we ensure every child receives a holistic experience.
+
+Our dedicated teachers are not just instructors but mentors, guiding students to think critically, act responsibly, and dream boldly. With state-of-the-art facilities and a safe, supportive environment, we empower our students to grow intellectually, socially, and morally.
+
+Over the years, we have proudly watched our students excel in academics, arts, sports, and leadership — a testimony to the solid foundation we provide.
+
+At <b>TBHS</b>, we don’t just educate minds; we shape futures.
+Welcome to a school where learning is a journey, values are a compass, and every child shines.</p>
+<img src="prac1.png" class="prac-1">
+          </div>
+          </div>
+          <div class="about-management">
+            <div>
+              <h3 class="about-h">The Management</h3>
+            </div>
+            <div class="propri">
+            <div>
+              <h4 class="about-h">
+                The Proprietor
+              </h4>
+              <p class="notes">At the heart of <b>TBHS</b> is a vision inspired by the belief that every child carries within them the seed of greatness. As the proprietor, my passion has always been to create a learning environment where those seeds can be nurtured, watered, and allowed to flourish.
+
+When this school was founded, it was more than just a dream; it was a calling — a commitment to raise future leaders who will not only excel academically but also uphold values of integrity, service, and innovation. Over the years, it has been truly fulfilling to watch our students grow into confident, responsible, and purpose-driven young people.
+
+I remain deeply grateful to our dedicated teachers, supportive parents, and vibrant learners who make this vision a reality every single day. Together, we continue to build a community where excellence is the standard, character is the foundation, and every child is empowered to shine.</p>
+            <!--<div class="propri-foot">
+              <img src="passport.jpg" class="propri-img">
+              <p>Apostle David Emmanuel (NHS, BcTS)</p>
+            </div>-->
+            </div>
+            <div>
+              <h4 class="about-h">The proprietress</h4>
+              <p class="notes">At <b>TBHS</b>, every child is more than just a student — they are a promise, a future, and a light waiting to shine. As the proprietress, my deepest joy lies in seeing these young minds and hearts nurtured in an environment where learning meets character, and knowledge is built on the foundation of values.
+
+This school was founded with the conviction that quality education, when paired with discipline, creativity, and care, can transform lives and communities. Over the years, it has been rewarding to watch our children grow not only in academic excellence but also in confidence, kindness, and leadership.
+
+I remain committed to ensuring that <b>Tetotim</b> continues to be a place where every child feels valued, supported, and inspired to reach their highest potential. With the dedication of our teachers, the trust of our parents, and the brilliance of our students, we are building more than a school — we are building a legacy.</p>
+           <!--<div class="propri-foot">
+              <img src="passport.jpg" class="propri-img">
+              <p>Apostle David Emmanuel (NHS, BcTS)</p>
+            </div> -->
+          </div>
+          </div>
+          </div>
+
+        </div>
+       </section>
+<footer class="footer-content">
+  <div class="foot1">
+  <div class="footer-logo-container">
+   <img class="footer-logo" src="TBHS1.png" alt="logo"></div>
+   <div class="foot1-2"><p>Tetotim Blessed Hope School</p>
+   <p>Read Play Lead Succeed</p>
+   </div>
+   </div>
+<div class="foot1-3">
+
+<p class="footnote">Quick Links</p>
+
+  <p><a href="index.html">Home</a></p>
+  <p><a href="news.html">Newsletter</a></p>
+  <p><a href="home work.html">Home Works</a></p>
+  <p><a href="tests and exams.html">Tests & Exams</a></p>
+  <p><a href="form.html">Check Results</a></p>
+</div>
+
+
+<div class="foot2">
+
+    <div class="footnote">Contact us</div>
+    <div class="contact-info">
+    <div class="mail">
+      <div>
+      <p><img class="f-icon" src="mail.png"></p>
+      </div>
+      <div>
+      <p>tbhschools@gmail.com</p>
+      </div>
+    </div>
+    <div class="phone">
+      <div>
+      <p><img class="f-icon" src="telephone.png"></p>
+     </div>
+     <div>
+      <p>+234-902-862-9730</p>
+      </div>
+    </div>
+    <div class="whatsapp">
+      <div>
+      <p><img class="f-icon" src="whatsapp.png"></p>
+      </div>
+      <div>
+        <p>+234-902-862-9730</p>
+      </div>
+      </div>
+      <div class="location">
+        <div>
+          <p><img class="f-icon" src="pin.png"></p>
+        </div>
+        <div>
+          <p>Ado Ekiti</p>
+        </div>
+        </div>
+        </div>
+      </div>
+      <div class="footlast">
+        <p>At TBHS, education goes beyond the classroom. We nurture intellect, character, and confidence  preparing students to excel in an ever-changing world. Give your child the advantage of quality education; enroll today!
+        </p>
+      </div>
+
+  
+<div class="foot4">
+  &copy; 2025 TBHS. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
