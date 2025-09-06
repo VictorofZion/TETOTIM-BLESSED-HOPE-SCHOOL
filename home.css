@@ -58,6 +58,13 @@ width: 100%;
 
 
 }
+.navbar img{
+    width: 40px;
+    @media(max-width: 420px){
+        width: 30px;
+    }
+}
+
 .scroll-head {
     width: 50px;
 }
@@ -608,6 +615,7 @@ min-height: 65px;
     letter-spacing: 1.9px;
     font-weight: normal;
 }
+
 
 
 
