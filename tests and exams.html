@@ -286,5 +286,13 @@ The future belongs to those who prepare for it today—make sure you are one of 
 </html>
     </body>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("img").forEach(img => {
+      img.setAttribute("loading", "lazy");
+    });
+  });
+</script>
 </html>
+
 
