@@ -266,6 +266,9 @@ body {
         text-align: center;
         letter-spacing: 6px;
     }
+    @media(min-width: 481px) and (max-width: 550px){
+        font-size: 60px;
+    }
 
 
 }
@@ -1437,6 +1440,7 @@ width: 70%;
 
    
 }
+
 
 
 
