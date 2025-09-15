@@ -379,6 +379,7 @@ body {
 
 .intro {
   
+    max-height: 1100px;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
@@ -388,26 +389,19 @@ body {
     background-color: whitesmoke;
     width: 100%;
     padding-top: 90px;
-    padding-bottom: 90px;
+    padding-bottom: 0px;
 
 
-            @media (min-width: 769px) {
-              display: flex;
-                flex-direction: row;
-                flex: 2 1;
-                gap: 10px;
-                justify-content: center;
-                align-items: center;
+            @media (min-width: 768px) {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 20px;
+              justify-content: center;
+              justify-items: center;
+              align-items: center;
+              vertical-align: center;
             }
-            @media (min-width: px) {
-                display: flex;
-                flex-direction: column;
-                flex: 1;
-                gap: 50px;
-                justify-content: center;
-                align-items: center;
-            }
-
+            
 }
 
 .intro-text {
@@ -431,59 +425,35 @@ body {
             @media (width >= 40em){
                 margin-left: 60px;
                 max-width: 100%;
+            
 
             }
-@media (width >= 60em){
-                margin-left: 110px;
-                width: 6800px;
+            @media (width >= 60em){
+                margin-left: 30px;
+                margin-top: 80px;
+              
 
             }
 
 }
-.intimg {
-   max-width: 80%;
-  
- 
-   border-radius: 15px;
 
-@media (max-width: 480px) {
-    max-width: 100%;
-    height: 600px;
-    object-fit: cover;
-   
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block; /* ensures margin auto works */
-}
-
-@media (max-width: 768px) {
-    max-width: 100%;
-    height: 600px;
-    object-fit: cover;
-   
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block; /* ensures margin auto works */
-}
-}
 
 .intro-img {
-   display: flex;
-   margin-right: auto;
-    justify-content: center;
-    align-items: left;
-
-    @media (max-width: 480px) {
-        max-width: 100%;
-        height: 100%;
-
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block; /* ensures margin auto works */
-    }
+    width: 100%;
+    min-height: 200px;
+    
+}
+.intro-img{
+    background: url(tetotim6c.png) no-repeat top;
+    background-size: contain;
+    height: 350px;
+    background-attachment: scroll;
+@media(min-width: 768px){
+  background: url('tetotim6c.png') no-repeat right center;
+  background-size: contain; /* make it taller than the section */
+  background-attachment: fixed; /* this makes it "reveal" as user scrolls */
+  min-height: 500px;
+}
 }
 
 
@@ -703,51 +673,29 @@ body {
     color: rgb(3, 59, 97);
 }
 
-.prac-1 {
+
+
+.pracu{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-     max-width:100%;
-    margin-left: -8px;
-    margin-right: auto;
-    border-radius: 10px;
-     height: 300px;
-    object-fit: cover;
-    object-position: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    justify-items: center;
+    align-items: top;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
 
-    
- @media (width >= 40em){
-         width:60% ;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-     height: 300px;
-    object-fit: cover;
-    object-position: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
-
-    display: block; /* ensures margin auto works */
-                    
-                }
-                @media (width >= 60em){
-                    width:80% ;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-     height: 300px;
-    object-fit: cover;
-    object-position: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
-
-    display: block; /* ensures margin auto works */
-                }
-
+    @media(max-width: 767px){
+        display: flex;
+        flex-direction: column;
+        margin-left: -11px;
+    }
 }
 
+.pracu img{
+    width: 100%;
+    border-radius: 15px;
+}
 .footer-content {
 display: grid;
 grid-template-columns: 1fr 0.5fr 1fr 1fr;
@@ -1440,7 +1388,6 @@ width: 70%;
 
    
 }
-
 
 
 
