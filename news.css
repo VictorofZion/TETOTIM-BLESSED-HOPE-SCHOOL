@@ -238,6 +238,11 @@ body {
     -webkit-text-stroke-width: 1px;
     height: 90%;
     transition: opacity 3s;
+
+    
+    @media(min-width: 769px){
+        font-size: 25px;
+    }
 }
 .bcka p:hover {
     opacity: 0;
@@ -447,5 +452,6 @@ min-height: 65px;
     letter-spacing: 1.9px;
     font-weight: normal;
 }
+
 
 
